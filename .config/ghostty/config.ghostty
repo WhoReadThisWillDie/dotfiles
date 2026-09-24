@@ -1,0 +1,17 @@
+theme = "Catppuccin Mocha"
+
+font-family = "JetBrains Mono"
+font-style = bold
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+cursor-style = block
+shell-integration-features = "no-cursor, no-title"
+bell-features = no-title
+
+background-opacity = 0.85
+unfocused-split-opacity = 0.6
+background-blur-radius = 30
+
+split-divider-color = #313244

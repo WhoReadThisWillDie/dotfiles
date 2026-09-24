@@ -1,0 +1,93 @@
+[general]
+passthrough_unbounded_keys = true
+
+[hotkeys]
+"Primary+Shift+Space" = "hints"
+"Primary+Shift+R"     = "recursive_grid --cursor-selection-mode hold"
+"Primary+Shift+S"     = "scroll"
+"Primary+Shift+G" = "__disabled__"
+
+[recursive_grid]
+grid_cols       = 5
+grid_rows       = 5
+keys            = "qwertasdfgzxcvbyuiophjkl;"
+min_size_width  = 10
+min_size_height = 10
+max_depth       = 2
+
+[recursive_grid.animation]
+enabled = true
+
+[recursive_grid.ui]
+font_size                  = 16
+line_color                 = "#891818"
+highlight_color            = "#11FFFFFF"
+text_color                 = "#DD0000"
+sub_key_preview            = true
+sub_key_preview_font_size  = 14
+sub_key_preview_text_color = "#880000"
+
+[recursive_grid.hotkeys]
+"Backspace"       = "action backspace"
+"Cmd+Enter"       = ["action right_click", "idle"]
+"Enter"           = ["action left_click", "idle"]
+"Escape"          = "idle"
+"Shift+D"         = "action mouse_down"
+"Shift+Enter"     = "action left_click"
+"Shift+I"         = "action mouse_down"
+"Shift+L"         = "action left_click"
+"Shift+M"         = "action middle_click"
+"Shift+R"         = "action right_click"
+"Shift+U"         = "action mouse_up"
+"Space"           = "action reset"
+"Tab"             = "idle"
+"`"               = "toggle-cursor-follow-selection"
+
+[scroll]
+invert_scroll    = true
+scroll_step_half = 250
+
+[scroll.hotkeys]
+"Cmd+Enter"       = ["action right_click", "idle"]
+"Enter"           = ["action left_click", "idle"]
+"Escape"          = "idle"
+"PageDown"        = "action page_down"
+"PageUp"          = "action page_up"
+"Shift+D"         = "action mouse_down"
+"Shift+Enter"     = "action left_click"
+"Shift+G"         = "action go_bottom"
+"Shift+I"         = "action mouse_down"
+"Shift+L"         = "action left_click"
+"Shift+M"         = "action middle_click"
+"Shift+R"         = "action right_click"
+"Shift+U"         = "action mouse_up"
+"Tab"             = "idle"
+"d"               = "action page_down"
+"gg"              = "action go_top"
+"h"               = "action scroll_left"
+"j"               = "action scroll_down"
+"k"               = "action scroll_up"
+"l"               = "action scroll_right"
+"u"               = "action page_up"
+
+[virtual_pointer]
+enabled = true
+
+[virtual_pointer.ui]
+size  = 4
+color = "#FFFFAA22"
+
+[mode_indicator.scroll]
+enabled = true
+
+[sticky_modifiers]
+enabled = true
+
+[smooth_scroll]
+enabled = false
+
+[systray]
+enabled = false
+
+[logging]
+disable_file_logging = true
