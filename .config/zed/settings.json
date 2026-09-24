@@ -1,0 +1,120 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "proxy": "",
+  "edit_predictions": {
+    "allow_data_collection": "no"
+  },
+  "agent": {
+    "default_model": {
+      "effort": "high",
+      "provider": "zed.dev",
+      "model": "gpt-6-luna",
+      "enable_thinking": true
+    },
+    "sidebar_side": "right",
+    "play_sound_when_agent_done": "always",
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {}
+    },
+    "enable_feedback": false,
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "show_count_badge": true,
+    "file_icons": true,
+    "tree_view": true,
+    "dock": "left"
+  },
+  "project_panel": {
+    "diagnostic_badges": true,
+    "git_status_indicator": true,
+    "bold_folder_labels": false,
+    "dock": "left"
+  },
+  "use_smartcase_search": true,
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "prettier": {
+    "allowed": true
+  },
+  "semantic_tokens": "combined",
+  "ensure_final_newline_on_save": false,
+  "hard_tabs": false,
+  "vim": {
+    "toggle_relative_line_numbers": false,
+    "use_smartcase_find": true,
+    "use_system_clipboard": "on_yank"
+  },
+  "search": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "debugger": {
+    "button": false
+  },
+  "terminal": {
+    "button": false
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": true
+    }
+  },
+  "relative_line_numbers": "enabled",
+  "vertical_scroll_margin": 10.0,
+  "gutter": {
+    "line_numbers": true
+  },
+  "autosave": "off",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "auto_indent_on_paste": true,
+  "format_on_save": "on",
+  "wrap_guides": [
+    160
+  ],
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Light",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "vim_mode": true,
+  "minimap": {
+    "thumb": "always",
+    "show": "always"
+  },
+  "base_keymap": "JetBrains",
+  "ui_font_size": 16,
+  "buffer_font_size": 12.0,
+  "buffer_font_features": {
+    "calt": false,
+    "liga": false
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha - No Italics",
+  },
+}

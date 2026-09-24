@@ -1,0 +1,102 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "bindings": {
+      "cmd-i": "agent::Toggle"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-9": "git_panel::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "unbind": {
+      "cmd-p": "editor::ShowSignatureHelp"
+    }
+  },
+  {
+    "unbind": {
+      "cmd-o": "workspace::Open"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+    "bindings": {
+      "ctrl-n": "vim::GoToNextReference"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+    "unbind": {
+      "] r": "vim::GoToNextReference"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+    "bindings": {
+      "ctrl-p": "vim::GoToPreviousReference"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+    "unbind": {
+      "[ r": "vim::GoToPreviousReference"
+    }
+  },
+  {
+    "context": "AcpThread",
+    "bindings": {
+      "ctrl-/": "agent::ToggleModelSelector"
+    }
+  },
+  {
+    "context": "AcpThread",
+    "unbind": {
+      "alt-cmd-/": "agent::ToggleModelSelector"
+    }
+  },
+  {
+    "context": "AcpThread",
+    "bindings": {
+      "ctrl-.": "agent::ToggleProfileSelector"
+    }
+  },
+  {
+    "context": "AcpThread",
+    "unbind": {
+      "cmd-i": "agent::ToggleProfileSelector"
+    }
+  }
+]
