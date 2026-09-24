@@ -12,8 +12,6 @@ source "$BREW_PATH/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 # fzf **
 source "$BREW_PATH/opt/fzf/shell/completion.zsh"
 
-export HOMEBREW_NO_AUTO_UPDATE=1
-
 # Tab completion
 autoload -Uz compinit && compinit
 
@@ -51,8 +49,10 @@ eval "$(zoxide init --cmd cd zsh)"
 # Node version manager
 eval "$(fnm env --use-on-cd --shell zsh)"
 
-export HF_HUB_DISABLE_TELEMETRY=1 
 
+export HOMEBREW_NO_AUTO_UPDATE=1
+export LOCAL_NOTEBOOK_DEV=1 # Expiremental Jupyter support for Zed
+export HF_HUB_DISABLE_TELEMETRY=1 
 export XDG_CONFIG_HOME=~/.config
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export EZA_CONFIG_DIR=~/.config/eza
