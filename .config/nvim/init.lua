@@ -107,17 +107,24 @@ vim.lsp.config("basedpyright", {
 })
 
 -- treesitter
-require("nvim-treesitter").install({
+local ensure_installed = {
 	"lua",
 	"markdown",
 	"html",
 	"css",
 	"javascript",
-	"jsx",
 	"typescript",
 	"tsx",
 	"python",
-})
+	"typst",
+}
+local installed = require("nvim-treesitter.config").get_installed()
+local missing = vim.tbl_filter(function(p)
+	return not vim.list_contains(installed, p)
+end, ensure_installed)
+if #missing > 0 then
+	require("nvim-treesitter").install(missing)
+end
 
 vim.api.nvim_create_autocmd("FileType", {
 	desc = "Treesitter highlight and indent",
@@ -167,7 +174,7 @@ require("conform").setup({
 		javascriptreact = { "prettier" },
 		typescript = { "prettier" },
 		typescriptreact = { "prettier" },
-		python = { "ruff" },
+		python = { "ruff_format" },
 	},
 })
 
@@ -190,6 +197,9 @@ require("telescope").setup({
 		},
 	},
 	pickers = {
+		find_files = {
+			hidden = true,
+		},
 		buffers = {
 			mappings = {
 				i = { ["<C-d>"] = actions.delete_buffer },
