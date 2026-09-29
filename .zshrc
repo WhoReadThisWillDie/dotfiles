@@ -49,7 +49,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # Node version manager
 eval "$(fnm env --use-on-cd --shell zsh)"
 
-
+export SSH_AUTH_SOCK=/Users/msadkoff/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
 export HOMEBREW_NO_AUTO_UPDATE=1
 export LOCAL_NOTEBOOK_DEV=1 # Expiremental Jupyter support for Zed
 export HF_HUB_DISABLE_TELEMETRY=1 
