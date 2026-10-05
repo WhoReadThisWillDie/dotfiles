@@ -27,6 +27,29 @@ vim.keymap.set({ "n", "v" }, "<leader>f", function()
 end)
 vim.keymap.set("n", "-", "<cmd>Oil --float<cr>")
 
+-- commands
+vim.api.nvim_create_user_command("PackDel", function()
+	local plugins = vim.iter(vim.pack.get())
+		:filter(function(p)
+			return not p.active
+		end)
+		:map(function(p)
+			return p.spec.name
+		end)
+		:totable()
+
+	if #plugins == 0 then
+		vim.notify("Nothing to delete")
+		return
+	end
+
+	local message = "Delete unused plugins: " .. table.concat(plugins, ", ")
+	if vim.fn.confirm(message, "&Yes\n&No", 2) == 1 then
+		vim.pack.del(plugins)
+	end
+	vim.notify("Deleted plugins: " .. table.concat(plugins, ", "))
+end, { desc = "Delete unused plugins" })
+
 -- built-in visuals
 vim.diagnostic.config({
 	virtual_text = { prefix = "●", spacing = 2 },
